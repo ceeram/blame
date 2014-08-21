@@ -1,0 +1,31 @@
+{
+    "name": "ceeram/cakephp-blame",
+    "description": "CakePHP plugin to update created_by and modified_by fields",
+    "license": "MIT",
+    "type": "cakephp-plugin",
+    "authors": [
+        {
+            "name": "Ceeram",
+            "email": "c33ram@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "composer/installers": "*"
+    },
+    "require-dev": {
+        "cakephp/cakephp": "3.0.*-dev",
+        "phpunit/phpunit": "4.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Blame\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Blame\\Test\\": "tests"
+        }
+    }
+
+}
