@@ -1,12 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: marc
- * Date: 8/21/14
- * Time: 10:36 AM
- */
-
 namespace Ceeram\Blame\Event;
+
 use Cake\Controller\Component\AuthComponent;
 use Cake\Event\Event;
 use Cake\Event\EventListener;
@@ -33,11 +27,7 @@ class LoggedInUserListener implements EventListener {
 	}
 
 	public function beforeSave(Event $event, Entity $entity, $options) {
-		debug('imhere');
-		$options['loggedInUser'] = $this->getUser();
+		$options['loggedInUser'] = $this->Auth->user('id');
 	}
 
-	protected function getUser() {
-		return $this->Auth->user('id');
-	}
-} 
+}
