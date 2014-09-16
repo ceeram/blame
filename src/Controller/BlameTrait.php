@@ -6,9 +6,9 @@
  * Time: 12:11 PM
  */
 
-namespace Blame\Controller;
+namespace Ceeram\Blame\Controller;
 
-use Blame\Event\LoggedInUserListener;
+use Ceeram\Blame\Event\LoggedInUserListener;
 
 trait BlameTrait {
 

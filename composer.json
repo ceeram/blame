@@ -19,12 +19,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Blame\\": "src"
+            "Ceeram\\Blame\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Blame\\Test\\": "tests"
+            "Ceeram\\Blame\\Test\\": "tests"
         }
     }
 

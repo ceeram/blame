@@ -6,7 +6,7 @@
  * Time: 10:36 AM
  */
 
-namespace Blame\Event;
+namespace Ceeram\Blame\Event;
 use Cake\Controller\Component\AuthComponent;
 use Cake\Event\Event;
 use Cake\Event\EventListener;
