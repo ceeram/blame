@@ -8,6 +8,9 @@ use Cake\ORM\Entity;
 
 /**
  * Class LoggedInUserListener
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
  */
 class LoggedInUserListener implements EventListener {
 

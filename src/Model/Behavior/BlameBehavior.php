@@ -7,6 +7,9 @@ use Cake\Event\Event;
 
 /**
  * Class BlameBehavior
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
  */
 class BlameBehavior extends Behavior {
 
