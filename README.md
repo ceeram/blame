@@ -6,11 +6,7 @@ CakePHP 3.0 plugin to update `created_by` and `modified_by` fields.
 Installation
 ============
 
-Run the following command:
-
-`composer require ceeram/cakephp-blame:dev-master`
-
-or add the following lines to your application's `composer.json`:
+Add the following lines to your application's `composer.json`:
 
 ```
     "require": {
@@ -22,13 +18,17 @@ followed by the command:
 
 `composer update`
 
+Or run the following command directly without changing your `composer.json`:
+
+`composer require ceeram/cakephp-blame:dev-master`
+
 Configuration
 =============
 
 Add the following line to your AppController:
 
 ```
-    use \Blame\Controller\BlameTrait;
+    use \Ceeram\Blame\Controller\BlameTrait;
 ```
 
 Attach the behavior in the models you want with:
