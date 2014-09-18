@@ -1,5 +1,5 @@
 <?php
-namespace Blame\Model\Behavior;
+namespace Ceeram\Blame\Model\Behavior;
 
 use Cake\ORM\Behavior;
 use Cake\ORM\Entity;
