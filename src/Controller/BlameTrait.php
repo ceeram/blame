@@ -13,9 +13,9 @@ use Ceeram\Blame\Event\LoggedInUserListener;
 trait BlameTrait {
 
 	public function loadModel($modelClass = null, $type = 'Table') {
-		parent::loadModel($modelClass, $type);
+		$model = parent::loadModel($modelClass, $type);
 		$listener = new LoggedInUserListener($this->Auth);
-		$this->{$modelClass}->eventManager()->attach($listener);
+		$model->eventManager()->attach($listener);
 	}
 
 } 

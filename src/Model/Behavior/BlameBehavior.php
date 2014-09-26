@@ -20,7 +20,7 @@ class BlameBehavior extends Behavior {
 		if ($entity->isNew()) {
 			$entity->set('created_by', $options['loggedInUser']);
 		}
+
 		$entity->set('modified_by', $options['loggedInUser']);
 	}
-
 } 
