@@ -35,6 +35,6 @@ Attach the behavior in the models you want with:
 
 ```
     public function initialize(array $config) {
-        $this->addBehavior('Blame.Blame');
+        $this->addBehavior('Ceeram/Blame.Blame');
     }
 ```
