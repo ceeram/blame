@@ -22,6 +22,10 @@ Or run the following command directly without changing your `composer.json`:
 
 `composer require ceeram/cakephp-blame:dev-master`
 
+## Usage
+
+In your app's `config/bootstrap.php` add: `Plugin::load('Ceeram/Blame')`;
+
 Configuration
 =============
 
