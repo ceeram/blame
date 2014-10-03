@@ -40,12 +40,18 @@ class BlameBehaviorTest extends TestCase {
 	public function testBeforeSave() {
 		$table = $this->getMock('Cake\ORM\Table');
 		$this->Behavior = new BlameBehavior($table);
-		$options = new ArrayObject(['loggedInUser' => 5]);
 
 		$event = new Event('Model.beforeSave');
 		$entity = new Entity(['name' => 'Foo']);
-
 		$entity->isNew(false);
+
+		$options = new ArrayObject(['loggedInUser' => null]);
+		$this->Behavior->beforeSave($event, $entity, $options);
+
+		$this->assertNull($entity->created_by, 'created_by is expected NOT to be updated');
+		$this->assertNull($entity->modified_by, 'modified_by is expected NOT to be updated');
+
+		$options = new ArrayObject(['loggedInUser' => 5]);
 		$this->Behavior->beforeSave($event, $entity, $options);
 
 		$this->assertNull($entity->created_by, 'created_by is expected NOT to be updated');
