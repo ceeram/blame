@@ -1,9 +1,10 @@
 <?php
 namespace Ceeram\Blame\Model\Behavior;
 
+use ArrayObject;
+use Cake\Event\Event;
 use Cake\ORM\Behavior;
 use Cake\ORM\Entity;
-use Cake\Event\Event;
 
 /**
  * Class BlameBehavior
@@ -13,7 +14,10 @@ use Cake\Event\Event;
  */
 class BlameBehavior extends Behavior {
 
-	public function beforeSave(Event $event, Entity $entity, $options) {
+/**
+ * {@inheritDoc}
+ */
+	public function beforeSave(Event $event, Entity $entity, ArrayObject $options) {
 		if (empty($options['loggedInUser'])) {
 			return;
 		}
@@ -23,4 +27,4 @@ class BlameBehavior extends Behavior {
 
 		$entity->set('modified_by', $options['loggedInUser']);
 	}
-} 
+}

@@ -1,6 +1,7 @@
 <?php
 namespace Ceeram\Blame\Event;
 
+use ArrayObject;
 use Cake\Controller\Component\AuthComponent;
 use Cake\Event\Event;
 use Cake\Event\EventListener;
@@ -14,12 +15,23 @@ use Cake\ORM\Entity;
  */
 class LoggedInUserListener implements EventListener {
 
-	protected $Auth;
+/**
+ * @var AuthComponent
+ */
+	protected $_Auth;
 
+/**
+ * Constructor
+ *
+ * @param \Cake\Controller\Component\AuthComponent $Auth Authcomponent
+ */
 	public function __construct(AuthComponent $Auth) {
-		$this->Auth = $Auth;
+		$this->_Auth = $Auth;
 	}
 
+/**
+ * {@inheritDoc}
+ */
 	public function implementedEvents() {
 		return [
 			'Model.beforeSave' => [
@@ -29,8 +41,16 @@ class LoggedInUserListener implements EventListener {
 		];
 	}
 
-	public function beforeSave(Event $event, Entity $entity, $options) {
-		$options['loggedInUser'] = $this->Auth->user('id');
+/**
+ * Before save listener.
+ *
+ * @param \Cake\Event\Event $event The beforeSave event that was fired
+ * @param \Cake\ORM\Entity $entity The entity that is going to be saved
+ * @param \ArrayObject $options the options passed to the save method
+ * @return void
+ */
+	public function beforeSave(Event $event, Entity $entity, ArrayObject $options) {
+		$options['loggedInUser'] = $this->_Auth->user('id');
 	}
 
 }
