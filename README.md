@@ -1,10 +1,14 @@
-Blame
------
+# Blame
+
+[![Build Status](https://api.travis-ci.org/ceeram/blame.png)](https://travis-ci.org/ceeram/blame)
+[![Latest Stable Version](https://poser.pugx.org/ceeram/cakephp-blame/v/stable.svg)](https://packagist.org/packages/ceeram/cakephp-blame)
+[![Total Downloads](https://poser.pugx.org/ceeram/cakephp-blame/downloads.svg)](https://packagist.org/packages/ceeram/cakephp-blame)
+[![Latest Unstable Version](https://poser.pugx.org/ceeram/cakephp-blame/v/unstable.svg)](https://packagist.org/packages/ceeram/cakephp-blame)
+[![License](https://poser.pugx.org/ceeram/cakephp-blame/license.svg)](https://packagist.org/packages/ceeram/cakephp-blame)
 
 CakePHP 3.0 plugin to update `created_by` and `modified_by` fields.
 
-Installation
-============
+## Installation
 
 Add the following lines to your application's `composer.json`:
 
@@ -26,8 +30,7 @@ Or run the following command directly without changing your `composer.json`:
 
 In your app's `config/bootstrap.php` add: `Plugin::load('Ceeram/Blame')`;
 
-Configuration
-=============
+## Configuration
 
 Add the following line to your AppController:
 
