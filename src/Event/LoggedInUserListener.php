@@ -4,7 +4,7 @@ namespace Ceeram\Blame\Event;
 use ArrayObject;
 use Cake\Controller\Component\AuthComponent;
 use Cake\Event\Event;
-use Cake\Event\EventListener;
+use Cake\Event\EventListenerInterface;
 use Cake\ORM\Entity;
 
 /**
@@ -13,7 +13,7 @@ use Cake\ORM\Entity;
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  */
-class LoggedInUserListener implements EventListener {
+class LoggedInUserListener implements EventListenerInterface {
 
 /**
  * @var AuthComponent
