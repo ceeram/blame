@@ -10,11 +10,12 @@ CakePHP 3.0 plugin to update `created_by` and `modified_by` fields.
 
 ## Installation
 
+
 Add the following lines to your application's `composer.json`:
 
 ```
     "require": {
-        "ceeram/cakephp-blame": "dev-master"
+        "ceeram/cakephp-blame": "~1.0"
     }
 ```
 
@@ -24,7 +25,7 @@ followed by the command:
 
 Or run the following command directly without changing your `composer.json`:
 
-`composer require ceeram/cakephp-blame:dev-master`
+`composer require ceeram/cakephp-blame:~1.0`
 
 ## Usage
 
