@@ -38,6 +38,15 @@ Add the following line to your AppController:
     use \Ceeram\Blame\Controller\BlameTrait;
 ```
 
+Add the following inside your AppController Class
+
+```
+class AppController extends Controller
+{
+    use BlameTrait;
+}
+```
+
 Attach the behavior in the models you want with:
 
 ```
