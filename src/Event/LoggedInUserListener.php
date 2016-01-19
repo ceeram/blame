@@ -3,9 +3,9 @@ namespace Ceeram\Blame\Event;
 
 use ArrayObject;
 use Cake\Controller\Component\AuthComponent;
+use Cake\Datasource\EntityInterface;
 use Cake\Event\Event;
 use Cake\Event\EventListenerInterface;
-use Cake\ORM\Entity;
 
 /**
  * Class LoggedInUserListener
@@ -45,14 +45,13 @@ class LoggedInUserListener implements EventListenerInterface {
  * Before save listener.
  *
  * @param \Cake\Event\Event $event The beforeSave event that was fired
- * @param \Cake\ORM\Entity $entity The entity that is going to be saved
+ * @param \Cake\Datasource\EntityInterface $entity The entity that is going to be saved
  * @param \ArrayObject $options the options passed to the save method
  * @return void
  */
-	public function beforeSave(Event $event, Entity $entity, ArrayObject $options) {
+	public function beforeSave(Event $event, EntityInterface $entity, ArrayObject $options) {
 		if (empty($options['loggedInUser'])) {
 			$options['loggedInUser'] = $this->_Auth->user('id');
 		}
 	}
-
 }
