@@ -8,6 +8,9 @@
 
 CakePHP 3.0 plugin to update `created_by` and `modified_by` fields.
 
+# Abandoned
+This package is abandoned and no longer maintained. The author suggests using the muffin/footprint package instead.
+
 ## Installation
 
 
